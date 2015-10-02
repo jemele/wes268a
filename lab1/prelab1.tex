@@ -190,6 +190,19 @@ bandwidth.
 
 1. Construct a Simulink module that implements a raised cosine filter.
 
+The filter is designed in Matlab using $rcosdesign$:
+
+\begin{verbatim}
+>> h=rcosdesign(.5,5,2)
+
+h =
+  Columns 1 through 10
+   -0.0106    0.0300   -0.0531   -0.0750    0.4092    0.8038    0.4092   -0.0750   -0.0531    0.0300
+
+  Column 11
+   -0.0106
+\end{verbatim}
+
 \begin{figure}[hbtp]
 \includegraphics[width=1.0\columnwidth]{prelab1-simulation-diagram}
 \caption{
