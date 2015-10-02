@@ -48,7 +48,7 @@ signal $\tilde{S}(f)$.
 
 \subsection{Frequency demodulation errors}
 
-\begin{figure}[h]
+\begin{figure}[hbtp]
 \includegraphics[width=1.0\columnwidth]{prelab1-figure2a}
 \caption{
 \label{fig:prelab1-figure2a}
@@ -146,11 +146,20 @@ The resolution bandwidth required to resolve signals separated by 50 kHz that
 differ by 40 dB in power is given by:
 
 \begin{equation}
-\begin{split}
--40*log_{10}((\frac{50000}{\frac{B}{2\sqrt(2^(1/4)-1)}})^2 - 1) = -40 dB, solve for B \\
-B = 13115 \\
-\end{split}
+-40\ log_{10}\left(\left(\frac{50000}{\frac{B}{2\sqrt{\sqrt[4]{2}-1}}}\right)^2 - 1\right) = -40\ dB
 \end{equation}
+
+\begin{figure}[hbtp]
+\includegraphics[width=1.0\columnwidth]{prelab1-figure4}
+\caption{
+\label{fig:prelab1-figure4}
+{\bf Calculating the resolution bandwidth that meets design specifications.
+}
+}
+\end{figure}
+
+Solving for the resolution bandwidth $B\approx13115\ Hz$.
+\pagebreak
 
 \section{Matlab/Simulink Simulations}
 
