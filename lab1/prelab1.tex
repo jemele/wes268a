@@ -158,6 +158,17 @@ differ by 40 dB in power is given by:
 \end{figure}
 
 Solving for the resolution bandwidth $B\approx13115\ Hz$.
+
+Changing the video bandwidth (filter) or averaging will affect the result. If
+the video bandwidth is changed, the resolution bandwidth will also need to
+change. Averaging acts as low-frequency filter that rejects high frequency
+noise, effectively smoothing the signal. This reduction in noise will also
+affect the required resolution bandwidth.
+
+The expected value of additive noise is zero – averaging acts a low-pass filter
+that smooths the signal and eliminates the additive noise. This reduction in
+noise will affect the required resolution
+bandwidth.
 \pagebreak
 
 \section{Matlab/Simulink Simulations}
@@ -179,7 +190,7 @@ sample rate.
 \includegraphics[width=1.0\columnwidth]{prelab1-filter-impulse-response}
 \caption{
 \label{fig:prelab1-filter-impulse-response}
-{\bf Describe...
+{\bf The filter impulse response.
 }
 }
 \end{figure}
@@ -188,7 +199,7 @@ sample rate.
 \includegraphics[width=1.0\columnwidth]{prelab1-filter-impulse-spectrum}
 \caption{
 \label{fig:prelab1-filter-impulse-spectrum}
-{\bf Describe...
+{\bf The filter frequency response.
 }
 }
 \end{figure}
@@ -197,7 +208,7 @@ sample rate.
 \includegraphics[width=1.0\columnwidth]{prelab1-filter-input-output}
 \caption{
 \label{fig:prelab1-filter-input-output}
-{\bf Describe...
+{\bf The filter input and output for at least 20 symbols of upsampled data.
 }
 }
 \end{figure}
@@ -206,7 +217,8 @@ sample rate.
 \includegraphics[width=1.0\columnwidth]{prelab1-filter-output-spectrum}
 \caption{
 \label{fig:prelab1-filter-output-spectrum}
-{\bf Describe...
+{\bf The filter output spectrum for modulated BPSK data. The spectrum looks
+like a windowed function.
 }
 }
 \end{figure}
