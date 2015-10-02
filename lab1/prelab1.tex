@@ -11,7 +11,7 @@ filecolor=magenta,
 urlcolor=blue         
 }
 \begin{document}
-\title{Lab 1: Prelab}
+\title{WES268A Fall 2015 \\ Digital Communications \\ Lab 1: Prelab}
 \author{Joshua Emele $<$jemele@acm.org$>$}
 \maketitle
 
@@ -45,6 +45,7 @@ signal $\tilde{S}(f)$.
 }
 }
 \end{figure}
+\pagebreak
 
 \subsection{Frequency demodulation errors}
 
@@ -58,7 +59,7 @@ frequency error $x=0$.
 }
 \end{figure}
 
-As frequency error is introduced, the alias baseband copies shift past each
+As frequency error is introduced, the aliased baseband copies shift past each
 other.  Because $f_{c}$ dominates $f_{max}$, we assume $f_{c}$ is at least
 several orders of magnitude larger than $f_{max}$.
 
@@ -73,10 +74,6 @@ $\pm2f_{c}$ exist but are not visible in the figure.
 }
 \end{figure}
 
-The frequency error is now a magnitude larger than before, but is still
-relatively small because $f_{c}$ is several order of magnitude larger than
-$f_{max}$.
-
 \begin{figure}[hbtp]
 \includegraphics[width=1.0\columnwidth]{prelab1-figure2c}
 \caption{
@@ -88,8 +85,10 @@ $\pm2f_{c}$ exist but are not visible in the figure.
 }
 \end{figure}
 
-Even as the aliased copies slide past each other at baseband with the
-introduction of frequency error, the Nyquist rate of the baseband signal is
+The frequency error is now a magnitude larger than before, but is still
+relatively small because $f_{c}$ is several order of magnitude larger than
+$f_{max}$. Even as the aliased copies slide past each other at baseband with
+the introduction of frequency error, the Nyquist rate of the baseband signal is
 unaffected because $f_{max}$ remains unchanged.
 \pagebreak
 
@@ -162,5 +161,56 @@ Solving for the resolution bandwidth $B\approx13115\ Hz$.
 \pagebreak
 
 \section{Matlab/Simulink Simulations}
+
+\begin{figure}[hbtp]
+\includegraphics[width=1.0\columnwidth]{prelab1-simulation-diagram}
+\caption{
+\label{fig:prelab1-simulation-diagram}
+{\bf A simulink model that implements a raised cosine pulse with $\beta=0.5$,
+$delay = 5\ samples$, and $rate = 2\ samples/symbol$. A switch is provided to
+toggle between measuring the filter's impulse response and the filter response
+to modulated symbol data. An upsample block is provided to achieve the required
+sample rate.
+}
+}
+\end{figure}
+
+\begin{figure}[hbtp]
+\includegraphics[width=1.0\columnwidth]{prelab1-filter-impulse-response}
+\caption{
+\label{fig:prelab1-filter-impulse-response}
+{\bf Describe...
+}
+}
+\end{figure}
+
+\begin{figure}[hbtp]
+\includegraphics[width=1.0\columnwidth]{prelab1-filter-impulse-spectrum}
+\caption{
+\label{fig:prelab1-filter-impulse-spectrum}
+{\bf Describe...
+}
+}
+\end{figure}
+
+\begin{figure}[hbtp]
+\includegraphics[width=1.0\columnwidth]{prelab1-filter-input-output}
+\caption{
+\label{fig:prelab1-filter-input-output}
+{\bf Describe...
+}
+}
+\end{figure}
+
+\begin{figure}[hbtp]
+\includegraphics[width=1.0\columnwidth]{prelab1-filter-output-spectrum}
+\caption{
+\label{fig:prelab1-filter-output-spectrum}
+{\bf Describe...
+}
+}
+\end{figure}
+
+
 
 \end{document}
