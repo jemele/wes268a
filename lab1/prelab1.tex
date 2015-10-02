@@ -15,9 +15,13 @@ urlcolor=blue
 \author{Joshua Emele $<$jemele@acm.org$>$}
 \maketitle
 
-\section{Theory Problems}
+\section*{Theory Problems}
 
-\subsection{Spectrum of AM modulated signals}
+\subsection*{Spectrum of AM modulated signals}
+
+1. Sketch the amplitude of the frequency spectrum of the baseband signal
+$S(f)$.
+
 \begin{figure}[hbtp]
 \includegraphics[width=0.6\columnwidth]{prelab1-figure1}
 \caption{
@@ -47,7 +51,11 @@ signal $\tilde{S}(f)$.
 \end{figure}
 \pagebreak
 
-\subsection{Frequency demodulation errors}
+\subsection*{Frequency demodulation errors}
+
+2. As frequency error is introduced, the aliased baseband copies shift past each
+other.  Because $f_{c}$ dominates $f_{max}$, we assume $f_{c}$ is at least
+several orders of magnitude larger than $f_{max}$.
 
 \begin{figure}[hbtp]
 \includegraphics[width=1.0\columnwidth]{prelab1-figure2a}
@@ -58,10 +66,6 @@ frequency error $x=0$.
 }
 }
 \end{figure}
-
-As frequency error is introduced, the aliased baseband copies shift past each
-other.  Because $f_{c}$ dominates $f_{max}$, we assume $f_{c}$ is at least
-several orders of magnitude larger than $f_{max}$.
 
 \begin{figure}[hbtp]
 \includegraphics[width=1.0\columnwidth]{prelab1-figure2b}
@@ -92,9 +96,9 @@ the introduction of frequency error, the Nyquist rate of the baseband signal is
 unaffected because $f_{max}$ remains unchanged.
 \pagebreak
 
-\subsection{Phase demodulation errors}
+\subsection*{Phase demodulation errors}
 
-An AM signal $\tilde{s}(t)=A\ cos(2 \pi f_{c}t)$ where $A$ is a constant is
+3. An AM signal $\tilde{s}(t)=A\ cos(2 \pi f_{c}t)$ where $A$ is a constant is
 demodulated by $cos(2 \pi f_{c}t+\phi)$ where $\phi$ represents a phase error.
 
 An expression for the demodulated signal $d(t,\phi)$ as a function of the phase
@@ -150,9 +154,9 @@ sec(\phi)\leq10 \\
 
 \pagebreak
 
-\subsection{Agilent tutorial on Spectrum Analyzers}
+\subsection*{Agilent tutorial on Spectrum Analyzers}
 
-The resolution bandwidth required to resolve signals separated by 50 kHz that
+4. The resolution bandwidth required to resolve signals separated by 50 kHz that
 differ by 40 dB in power is given by:
 
 \begin{equation}
@@ -182,7 +186,9 @@ noise will affect the required resolution
 bandwidth.
 \pagebreak
 
-\section{Matlab/Simulink Simulations}
+\section*{Matlab/Simulink Simulations}
+
+1. Construct a Simulink module that implements a raised cosine filter.
 
 \begin{figure}[hbtp]
 \includegraphics[width=1.0\columnwidth]{prelab1-simulation-diagram}
@@ -196,6 +202,9 @@ sample rate.
 }
 }
 \end{figure}
+
+2. Plot the impulse response and frequency response of the filter and confirm
+that it agrees with the filter generated using Matlab in WES265. 
 
 \begin{figure}[hbtp]
 \includegraphics[width=1.0\columnwidth]{prelab1-filter-impulse-response}
@@ -214,6 +223,8 @@ sample rate.
 }
 }
 \end{figure}
+
+3. Construct a Simulink module for a Binary-Phase-Shift-Keyed transmitter.
 
 \begin{figure}[hbtp]
 \includegraphics[width=1.0\columnwidth]{prelab1-filter-input-output}
